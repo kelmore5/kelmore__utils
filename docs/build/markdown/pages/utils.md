@@ -10,13 +10,17 @@ A Python class to hold extraneous utility functions
 
 Right now, the only use for this class is to check a computer’s operating system
 
-Example:
+Usage:
 
 ```
 >>> from kelmore__utils import Utils
 >>>
+>>> Utils.os.is_linux()
+>>> Utils.os.is_mac()
 >>> Utils.os.is_windows()
 
+True if the current operating system is Linux else False
+True if the current operating system is Mac/OSX else False
 True if the current operating system is Windows else False
 ```
 
@@ -43,7 +47,7 @@ not None
     Any
 
 
-Example:
+Usage:
 
 ```
 >>> from kelmore__utils import Utils

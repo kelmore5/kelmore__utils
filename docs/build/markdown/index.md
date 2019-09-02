@@ -11,39 +11,46 @@ contain the root `toctree` directive. -->
 
 ## Utils
 
-This is a small library of array functions I’ve compiled for my own personal needs. This project
-doesn’t have anything fancy nor anything you can’t find from another library, but I like to
-write out the smaller functions I need rather than relying on packages.
+Utils is a small library of utility functions compiled for personal needs. There’s
+nothing too fancy nor anything you can’t find from another library. Utils consists of
+smaller functions to be used rather than relying on larger packages.
 
 Right now, this package is very small and only includes function to determine a computer’s operating
-system, but I hope to expand on it in the future.
-
-This is only on Github as I reference it in other projects I use, but if you’re reading this,
-check it out! There may be something you can use for your own projects to simplify using arrays.
-
-I don’t have any plans to maintain this project, but I will add from it from time to time. I may
-add more thorough documentation at some point for this, but as of now this suits my needs.
+system. Hopefully it will be expanded in the future.
 
 ### Install
 
+To be updated
+
 #### Dependencies
 
-* python 3.7
+* Python 3.7
 
 #### Import
 
 Once installed, you can import the main class like so:
 
 ```
-from kelmore__utils import Utils
-
-Utils.os.is_linux()
-Utils.os.is_mac()
-Utils.os.is_windows()
+>>> from kelmore__utils import Utils
+>>>
+>>> Utils.os.is_linux()     # True / False
+>>> Utils.os.is_mac()       # True / False
+>>> Utils.os.is_windows()   # True / False
 .
 .
 .
 ```
+
+### Documentation
+
+* [Main](docs/build/markdown/index.md)
+
+* [Utils](docs/build/markdown/pages/utils.md)
+
+### Personal Note
+
+Utils is only on Github because I reference it in other projects. I don’t have any plans
+to maintain this project, but I will add to it from time to time.
 
 <!-- kelmore__utils documentation master file, created by
 sphinx-quickstart on Sun Sep  1 18:49:11 2019.
@@ -57,13 +64,17 @@ A Python class to hold extraneous utility functions
 
 Right now, the only use for this class is to check a computer’s operating system
 
-Example:
+Usage:
 
 ```
 >>> from kelmore__utils import Utils
 >>>
+>>> Utils.os.is_linux()
+>>> Utils.os.is_mac()
 >>> Utils.os.is_windows()
 
+True if the current operating system is Linux else False
+True if the current operating system is Mac/OSX else False
 True if the current operating system is Windows else False
 ```
 
@@ -90,7 +101,7 @@ not None
     Any
 
 
-Example:
+Usage:
 
 ```
 >>> from kelmore__utils import Utils
