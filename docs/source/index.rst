@@ -14,6 +14,6 @@ kelmore_utils
    pages/utils
    pages/operating_system
 
-.. mdinclude:: ../../README.md
+.. mdinclude:: pages/README.md
 
 .. include:: pages/utils.rst

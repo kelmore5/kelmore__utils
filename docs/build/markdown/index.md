@@ -23,7 +23,7 @@ system. Hopefully it will be expanded in the future.
 You can install this project directly from Github via:
 
 ```
-pip3.7 install git+https://github.com/kelmore5/python-sub-utilities.git
+$ pip3.7 install git+https://github.com/kelmore5/python-sub-utilities.git
 ```
 
 #### Dependencies
@@ -54,7 +54,7 @@ Once installed, you can import the main class like so:
 ### Personal Note
 
 Utils is only on Github because I reference it in other projects. I don’t have any plans
-to maintain this project, but I will add to it from time to time.
+to maintain this project, but I will update it from time to time.
 
 <!-- kelmore__utils documentation master file, created by
 sphinx-quickstart on Sun Sep  1 18:49:11 2019.
