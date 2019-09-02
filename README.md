@@ -27,6 +27,11 @@ Once installed, you can import the main class like so:
     .
     .
     .
+    
+## Documentation
+
+* [Main](docs/build/markdown/index.md)
+* [Utils](docs/build/markdown/pages/utils.md)
 
 ## Personal Note
 
