@@ -1,7 +1,9 @@
-
+.git/
 .idea/
 
 *.pyc
 *.egg-info
 
 venv/
+
+.gitignore
