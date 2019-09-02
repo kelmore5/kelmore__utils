@@ -30,7 +30,7 @@ $ pip3.7 install git+https://github.com/kelmore5/python-sub-utilities.git
 
 * Python 3.7
 
-#### Import
+### Usage
 
 Once installed, you can import the main class like so:
 
@@ -50,6 +50,8 @@ Once installed, you can import the main class like so:
 * [Main](docs/build/markdown/index.md)
 
 * [Utils](docs/build/markdown/pages/utils.md)
+
+* [OperatingSystemCheck](docs/build/markdown/pages/operating_system.md)
 
 ### Personal Note
 
