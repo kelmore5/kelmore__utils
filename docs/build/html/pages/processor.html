@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ProcessorCheck &#8212; kelmore__utils 0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OperatingSystemCheck" href="operating_system.html" />
+    <link rel="prev" title="Utils" href="utils.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="operating_system.html" title="OperatingSystemCheck"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="Utils"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">kelmore__utils 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="processorcheck">
+<h1>ProcessorCheck<a class="headerlink" href="#processorcheck" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="kelmore__utils.utils.CPUTools">
+<em class="property">class </em><code class="sig-prename descclassname">kelmore__utils.utils.</code><code class="sig-name descname">CPUTools</code><a class="headerlink" href="#kelmore__utils.utils.CPUTools" title="Permalink to this definition">¶</a></dt>
+<dd><p>A Python helper class (used in <code class="xref py py-class docutils literal notranslate"><span class="pre">Utils</span></code>)
+to determine details about the computer’s CPU</p>
+<dl class="method">
+<dt id="kelmore__utils.utils.CPUTools.is_32">
+<em class="property">static </em><code class="sig-name descname">is_32</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#kelmore__utils.utils.CPUTools.is_32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the current processor is a 32-bit (only) CPU</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">is_32</span><span class="p">()</span>
+<span class="go">True / False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the current processor is only 32-bit else False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="kelmore__utils.utils.CPUTools.is_64">
+<em class="property">static </em><code class="sig-name descname">is_64</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#kelmore__utils.utils.CPUTools.is_64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the current processor is a 64-bit CPU</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">is_64</span><span class="p">()</span>
+<span class="go">True / False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the current processor is 64-bit else False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="kelmore__utils.utils.CPUTools.is_arm64">
+<em class="property">static </em><code class="sig-name descname">is_arm64</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#kelmore__utils.utils.CPUTools.is_arm64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the current processor is an arm64 CPU</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">is_arm64</span><span class="p">()</span>
+<span class="go">True / False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the current processor is arm64 else False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="kelmore__utils.utils.CPUTools.is_arm7l">
+<em class="property">static </em><code class="sig-name descname">is_arm7l</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#kelmore__utils.utils.CPUTools.is_arm7l" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the current processor is an arm7l CPU</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">is_arm7l</span><span class="p">()</span>
+<span class="go">True / False</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the current process is arm7l else False</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="kelmore__utils.utils.CPUTools.processor">
+<em class="property">static </em><code class="sig-name descname">processor</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#kelmore__utils.utils.CPUTools.processor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current processor</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">processor</span><span class="p">()</span>
+<span class="go">&#39;x86_x64&#39;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current processor</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="utils.html"
+                        title="previous chapter">Utils</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="operating_system.html"
+                        title="next chapter">OperatingSystemCheck</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/pages/processor.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="operating_system.html" title="OperatingSystemCheck"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="utils.html" title="Utils"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">kelmore__utils 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Kyle Elmore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>

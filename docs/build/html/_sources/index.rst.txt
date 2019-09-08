@@ -12,6 +12,7 @@ kelmore_utils
    :caption: Contents:
 
    pages/utils
+   pages/processor
    pages/operating_system
 
 .. mdinclude:: pages/README.md

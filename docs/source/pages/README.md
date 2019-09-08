@@ -1,7 +1,7 @@
 # Utils
 
 Utils is a small library of utility functions compiled for personal needs. There's 
-nothing too fancy nor anything you can't find from another library. Utils consists of
+nothing too fancy nor anything you can't find from another library, but Utils consists of
 smaller functions to be used rather than relying on larger packages.
 
 Right now, this package is very small and only includes function to determine a computer's 
@@ -30,9 +30,12 @@ Once installed, you can import the main class like so:
 
     >>> from kelmore__utils import Utils
     >>>
-    >>> Utils.os.is_linux()     # True / False
-    >>> Utils.os.is_mac()       # True / False
-    >>> Utils.os.is_windows()   # True / False
+    >>> Utils.cpu.is_32()           # True / False
+    >>> Utils.cpu.is_64()           # True / False
+    >>>
+    >>> Utils.os.is_linux()         # True / False 
+    >>> Utils.os.is_mac()           # True / False
+    >>> Utils.os.is_windows()       # True / False
     .
     .
     .
@@ -41,4 +44,5 @@ Once installed, you can import the main class like so:
 
 * [Main](docs/build/markdown/index.md)
 * [Utils](docs/build/markdown/pages/utils.md)
+* [CPUTools](docs/build/markdown/pages/processor.md)
 * [OperatingSystemCheck](docs/build/markdown/pages/operating_system.md)

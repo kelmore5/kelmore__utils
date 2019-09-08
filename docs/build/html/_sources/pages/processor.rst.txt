@@ -3,18 +3,8 @@
     You can adapt this file completely to your liking, but it should at least
     contain the root `toctree` directive.
 
-===============
-kelmore_utils
-===============
+ProcessorCheck
+==========================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   pages/utils
-   pages/processor
-   pages/operating_system
-
-.. mdinclude:: pages/README.md
-
-.. include:: pages/utils.rst
+.. autoclass:: kelmore__utils.utils.CPUTools
+    :members:

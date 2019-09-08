@@ -16,7 +16,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="OperatingSystemCheck" href="operating_system.html" />
+    <link rel="next" title="ProcessorCheck" href="processor.html" />
     <link rel="prev" title="kelmore_utils" href="../index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,7 +26,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="operating_system.html" title="OperatingSystemCheck"
+          <a href="processor.html" title="ProcessorCheck"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="kelmore_utils"
@@ -46,24 +46,42 @@
 <dt>
 <em class="property">class </em><code class="sig-prename descclassname">kelmore__utils.utils.</code><code class="sig-name descname">Utils</code></dt>
 <dd><p>A Python class to hold extraneous utility functions</p>
-<p>Right now, the only use for this class is to check a computer’s operating system</p>
+<p>Right now, the only use for this class is to check a computer’s CPU and operating system</p>
 <p>Usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">kelmore__utils</span> <span class="k">import</span> <span class="n">Utils</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">is_32</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">cpu</span><span class="o">.</span><span class="n">is_64</span><span class="p">()</span>
 <span class="go">&gt;&gt;&gt;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">os</span><span class="o">.</span><span class="n">is_linux</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">os</span><span class="o">.</span><span class="n">is_mac</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">os</span><span class="o">.</span><span class="n">is_windows</span><span class="p">()</span>
+
+<span class="go">True if the current processor is only 32-bit else False</span>
+<span class="go">True if the current processor is 64-bit else False</span>
 
 <span class="go">True if the current operating system is Linux else False</span>
 <span class="go">True if the current operating system is Mac/OSX else False</span>
 <span class="go">True if the current operating system is Windows else False</span>
 </pre></div>
 </div>
+<dl class="attribute">
+<dt>
+<code class="sig-name descname">cpu</code></dt>
+<dd><p>Used to determine a computer’s processor type</p>
+<p>alias of <a class="reference internal" href="processor.html#kelmore__utils.utils.CPUTools" title="kelmore__utils.utils.CPUTools"><code class="xref py py-class docutils literal notranslate"><span class="pre">CPUTools</span></code></a></p>
+</dd></dl>
+
 <dl class="method">
 <dt>
 <em class="property">static </em><code class="sig-name descname">first_non_none</code><span class="sig-paren">(</span><em class="sig-param">*items</em><span class="sig-paren">)</span> &#x2192; Any</dt>
 <dd><p>Takes a variable number of items as arguments and returns the first argument that is
 not None</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">first_non_none</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>items</strong> (<em>Any</em>) – Any number of arguments that may or may not be None</p>
@@ -75,14 +93,60 @@ not None</p>
 <dd class="field-odd"><p>Any</p>
 </dd>
 </dl>
-<p>Usage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">kelmore__utils</span> <span class="k">import</span> <span class="n">Utils</span>
-<span class="go">&gt;&gt;&gt;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">first_non_none</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+</dd></dl>
 
-<span class="go">5</span>
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">float_or_none</code><span class="sig-paren">(</span><em class="sig-param">num: str</em><span class="sig-paren">)</span> &#x2192; Optional[float]</dt>
+<dd><dl class="simple">
+<dt>Parses a string into a float. Returns None if the string cannot be parsed</dt><dd><p>(instead of raising an error).</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">float_or_none</span><span class="p">(</span><span class="s1">&#39;55.0&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">float_or_none</span><span class="p">(</span><span class="s1">&#39;54h&#39;</span><span class="p">)</span>
+<span class="go">55</span>
+<span class="go">None</span>
 </pre></div>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num</strong> (<em>str</em>) – A string to parse into a double</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A float type if the string is a valid float else None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<em class="property">static </em><code class="sig-name descname">int_or_none</code><span class="sig-paren">(</span><em class="sig-param">num: str</em><span class="sig-paren">)</span> &#x2192; Optional[int]</dt>
+<dd><dl class="simple">
+<dt>Parses a string into an integer. Returns None if the string cannot be parsed</dt><dd><p>(instead of raising an error).</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">float_or_none</span><span class="p">(</span><span class="s1">&#39;219&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Utils</span><span class="o">.</span><span class="n">float_or_none</span><span class="p">(</span><span class="s1">&#39;123abc&#39;</span><span class="p">)</span>
+<span class="go">219</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num</strong> (<em>str</em>) – A string to parse into an integer</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An int type if the string is a valid integer else None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Optional[int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -106,8 +170,8 @@ not None</p>
   <p class="topless"><a href="../index.html"
                         title="previous chapter">kelmore_utils</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="operating_system.html"
-                        title="next chapter">OperatingSystemCheck</a></p>
+  <p class="topless"><a href="processor.html"
+                        title="next chapter">ProcessorCheck</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -136,7 +200,7 @@ not None</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="operating_system.html" title="OperatingSystemCheck"
+          <a href="processor.html" title="ProcessorCheck"
              >next</a> |</li>
         <li class="right" >
           <a href="../index.html" title="kelmore_utils"
