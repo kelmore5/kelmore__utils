@@ -6,6 +6,18 @@ from typing import Any, Optional, Type
 class OperatingSystemCheck:
     """A Python helper class (used in :class:`Utils <kelmore__utils.utils.Utils>`)
         to determine a computer's operating system
+
+    Usage::
+
+        >>> from kelmore__utils import Utils
+        >>>
+        >>> Utils.os.is_linux()
+        >>> Utils.os.is_mac()
+        >>> Utils.os.is_windows()
+        True / False
+        True / False
+        True / False
+
     """
 
     @staticmethod
@@ -53,7 +65,18 @@ class OperatingSystemCheck:
 
 class CPUTools:
     """A Python helper class (used in :class:`Utils <kelmore__utils.utils.Utils>`)
-        to determine details about the computer's CPU"""
+        to determine details about the computer's CPU
+
+    Usage::
+
+        >>> from kelmore__utils import Utils
+        >>>
+        >>> Utils.cpu.is_32()
+        >>> Utils.cpu.is_64()
+        True / False
+        True / False
+
+    """
 
     @staticmethod
     def is_32() -> bool:
